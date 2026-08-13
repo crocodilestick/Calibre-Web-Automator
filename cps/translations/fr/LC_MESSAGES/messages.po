@@ -21,13 +21,14 @@
 # DeadBone <deadbone2000@yahoo.fr>, 2025
 # Tex <tex@grosist.fr>, 2025
 # BiduleChou <blistex77@gmail.com>, 2026
+# Geoffrey Coulaud <geoffrey.coulaud@gmail.com>, 2026
 msgid ""
 msgstr ""
 "Project-Id-Version: Calibre-Web Automated\n"
 "Report-Msgid-Bugs-To: https://github.com/crocodilestick/Calibre-Web-"
 "Automated\n"
 "POT-Creation-Date: 2026-08-06 15:04+0000\n"
-"PO-Revision-Date: 2026-02-11 09:17+0000\n"
+"PO-Revision-Date: 2026-08-13 22:22+0200\n"
 "Last-Translator: Tex <tex@grosist.fr>\n"
 "Language-Team: French\n"
 "Language: fr\n"
@@ -37,7 +38,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Loco-Source-Locale: fr_FR\n"
 "Generated-By: Babel 2.13.1\n"
-"X-Generator: Loco https://localise.biz/\n"
+"X-Generator: Poedit 3.9\n"
 "X-Loco-Parser: loco_parse_po\n"
 
 #: cps/about.py:65
@@ -48,7 +49,7 @@ msgstr "Statistiques"
 msgid "Calibre database unavailable. Please reconfigure the library path."
 msgstr ""
 "Base de données Calibre indisponible. Veuillez reconfigurer le chemin de la "
-"bibliothèque"
+"bibliothèque."
 
 #: cps/admin.py:180
 msgid "Server restarted, please reload page."
@@ -122,7 +123,7 @@ msgstr "Aucune correspondance en attente à rejeter"
 #: cps/admin.py:445
 #, python-format
 msgid "Rejected %(count)s match(es)"
-msgstr "%(count)s Correspondance(s) rejetée(s) "
+msgstr "%(count)s Correspondance(s) rejetée(s)"
 
 #: cps/admin.py:482
 #, python-brace-format
@@ -491,7 +492,7 @@ msgstr "La base de données des paramètres n'est pas accessible en écriture"
 
 #: cps/admin.py:1845 cps/opds.py:199 cps/web.py:2604 cps/web.py:2729
 msgid "title"
-msgstr "Titre"
+msgstr "titre"
 
 #: cps/admin.py:1951 cps/admin.py:2822
 #, python-format
@@ -1133,11 +1134,11 @@ msgstr ""
 
 #: cps/cwa_functions.py:2180
 msgid "Invalid book selection."
-msgstr "Sélection de livre invalide"
+msgstr "Sélection de livre invalide."
 
 #: cps/cwa_functions.py:2186
 msgid "Book not found."
-msgstr "Livre non trouvé"
+msgstr "Livre non trouvé."
 
 #: cps/cwa_functions.py:2192
 msgid "Selected book has no EPUB format."
@@ -1145,11 +1146,11 @@ msgstr "Le livre sélectionné n'a pas de format EPUB."
 
 #: cps/cwa_functions.py:2196
 msgid "EPUB file not found on disk."
-msgstr "Fichier EPUB introuvable sur le disque"
+msgstr "Fichier EPUB introuvable sur le disque."
 
 #: cps/cwa_functions.py:2211
 msgid "EPUB Fixer started for selected book."
-msgstr "EPUB Fixer démarré pour les livres sélectionnés"
+msgstr "EPUB Fixer démarré pour les livres sélectionnés."
 
 #: cps/cwa_functions.py:2214
 msgid "Failed to start EPUB Fixer for selected book."
@@ -1453,14 +1454,14 @@ msgid "This Email has been sent via Calibre-Web Automated."
 msgstr "Ce courriel a été envoyé depuis Calibre-Web Automated."
 
 #: cps/helper.py:129
-#, fuzzy, python-format
+#, python-format
 msgid "Conversion timed out for book id: %(book)d"
-msgstr "Format %(format)s introuvable pour le livre : %(book)d"
+msgstr "La conversion a expiré pour le livre : %(book)d"
 
 #: cps/helper.py:131
-#, fuzzy, python-format
+#, python-format
 msgid "Conversion failed for book id: %(book)d"
-msgstr "Format %(format)s introuvable pour le livre : %(book)d"
+msgstr "La conversion a échoué pour le livre : %(book)d"
 
 #: cps/helper.py:139
 msgid "Calibre-Web Automated Test Email"
@@ -1861,7 +1862,7 @@ msgstr "Erreur OAuth  : {}"
 
 #: cps/opds.py:200
 msgid "description"
-msgstr "Description"
+msgstr "description"
 
 #: cps/opds.py:483
 #, python-brace-format
@@ -2931,7 +2932,7 @@ msgstr "Port externe"
 
 #: cps/templates/admin.html:123
 msgid "Not set — reverse proxy detected"
-msgstr ""
+msgstr "Indéfini — Proxy inverse détecté"
 
 #: cps/templates/admin.html:134 cps/templates/config_view_edit.html:45
 msgid "Books per Page"
@@ -3373,7 +3374,7 @@ msgstr "Chargement..."
 
 #: cps/templates/book_edit.html:312
 msgid "Apply"
-msgstr ""
+msgstr "Appliquer"
 
 #: cps/templates/book_edit.html:369
 msgid "Search error!"
@@ -3872,6 +3873,8 @@ msgid ""
 "A reverse proxy was detected. Leave blank unless you need to override the "
 "port for direct access."
 msgstr ""
+"Un proxy inverse a été détecté. Laisser vide sauf si vous devez forcer le "
+"port pour un accès direct."
 
 #: cps/templates/config_edit.html:217
 msgid "Sync Kobo read progress to Hardcover (Requires API key per user)"
@@ -4678,9 +4681,9 @@ msgid ""
 "\">kindle-epub-fix.netlify.app</a> tool made by <a href=\"https://github.com/"
 "innocenat\">innocenat</a>."
 msgstr ""
-"Cet outil a été adapté à partir de l'outil <a href=\"https://kindle-epub-fix."
-"netlify.app/\">kindle-epub-fix.netlify.app</a> créé par <a href=\"https://"
-"github.com/innocenat\">innocenat</a>."
+"Cet outil a été adapté à partir de l'outil <a href=\"https://kindle-epub-"
+"fix.netlify.app/\">kindle-epub-fix.netlify.app</a> créé par <a "
+"href=\"https://github.com/innocenat\">innocenat</a>."
 
 #: cps/templates/cwa_settings.html:181
 msgid "Enable KOReader Sync (CWA Plugin)"
@@ -5305,7 +5308,7 @@ msgid ""
 msgstr ""
 "Remarque : le service d'application des métadonnées de CWA ne prend "
 "actuellement en charge que les fichiers au format EPUB et AZW3. Les fichiers "
-"dans d'autres formats seront simplement ignorés par le service."
+"dans d'autres formats seront simplement ignorés par le service"
 
 #: cps/templates/cwa_settings.html:851
 msgid "CWA Auto-Convert - Ignored Formats"
@@ -5370,7 +5373,7 @@ msgstr ""
 
 #: cps/templates/cwa_settings.html:937
 msgid "Creates a duplicate record, keeping both copies"
-msgstr "Crée un enregistrement en double, en conservant les deux copies."
+msgstr "Crée un enregistrement en double, en conservant les deux copies"
 
 #: cps/templates/cwa_settings.html:943
 msgid "CWA Auto-Ingest - Ignored Formats"
@@ -5866,9 +5869,10 @@ msgstr "Choisissez l'adresse de courriel:"
 msgid "Select All"
 msgstr "Sélectionner tout"
 
+# In french, colons should have spaces before and after.
 #: cps/templates/detail.html:917
 msgid "Additional email addresses:"
-msgstr "Adresses e-mail supplémentaires"
+msgstr "Adresses e-mail supplémentaires : "
 
 #: cps/templates/detail.html:918
 msgid "Enter additional email addresses (separated by commas):"
@@ -6459,7 +6463,7 @@ msgstr "Trier par ordre décroissant en fonction de l’index de série"
 
 #: cps/templates/kosync_plugin.html:112
 msgid "KOReader Sync is disabled."
-msgstr "La Synchronisation KOReader est désactivée"
+msgstr "La Synchronisation KOReader est désactivée."
 
 #: cps/templates/kosync_plugin.html:113
 msgid ""
@@ -6555,7 +6559,7 @@ msgstr "Précédent"
 
 #: cps/templates/layout.html:353
 msgid "Go to page"
-msgstr ""
+msgstr "Aller à la page"
 
 #: cps/templates/layout.html:376
 msgid "Book Details"
