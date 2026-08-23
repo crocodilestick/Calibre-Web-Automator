@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/crocodilestick/Calibre-Web-"
 "Automated\n"
 "POT-Creation-Date: 2026-08-06 15:04+0000\n"
-"PO-Revision-Date: 2026-05-14 01:36+0300\n"
+"PO-Revision-Date: 2026-08-23 05:54+0300\n"
 "Last-Translator: İsmail Hakkı Şen <hakki@outlook.com>\n"
 "Language-Team: \n"
 "Language: tr\n"
@@ -89,7 +89,7 @@ msgstr "Basılı Kitap ID başarıyla uygulandı"
 #: cps/admin.py:401
 #, python-format
 msgid "Match %(action)s"
-msgstr ""
+msgstr "Eşleşme %(action)s"
 
 #: cps/admin.py:439
 msgid "No pending matches to reject"
@@ -1151,14 +1151,17 @@ msgstr "Tekrarlı grup yoksayılmadı"
 #: cps/duplicates.py:1314
 msgid "Import is in progress. Run a full duplicate scan after ingest finishes."
 msgstr ""
+"İçe aktarma işlemi devam ediyor. İçe aktarma işlemi tamamlandıktan sonra tam "
+"bir kopya taraması gerçekleştirin."
 
 #: cps/duplicates.py:1335
 msgid "Duplicate scan queued"
 msgstr "Tekrarlı taraması sıraya alındı"
 
 #: cps/duplicates.py:1404
+#, fuzzy
 msgid "Duplicate scan completed (fallback)"
-msgstr ""
+msgstr "Kopya taraması tamamlandı (fallback)"
 
 #: cps/duplicates.py:1479
 msgid "Invalid resolution strategy"
@@ -1168,6 +1171,8 @@ msgstr "Geçersiz çözümleme stratejisi"
 msgid ""
 "Import is in progress. Execute duplicate resolution after ingest finishes."
 msgstr ""
+"İçe aktarma işlemi devam ediyor. İçe aktarma tamamlandıktan sonra yinelenen "
+"kayıt çözümleme işlemi gerçekleştirilecektir."
 
 #: cps/editbooks.py:112 cps/editbooks.py:169
 msgid ""
@@ -1785,6 +1790,9 @@ msgid ""
 "Duplicate scanning needs a one-time full scan before fast duplicate checks "
 "can run after imports and metadata changes. "
 msgstr ""
+"Yinelenen kayıtların taranması, içe aktarma ve meta veri değişikliklerinden "
+"sonra hızlı yinelenen kayıt kontrollerinin çalıştırılabilmesi için bir "
+"defaya mahsus tam tarama yapılmasını gerektirir."
 
 #: cps/render_template.py:74
 msgid "Books"
@@ -2259,7 +2267,7 @@ msgstr "Sihirli Kitaplık oluştur"
 
 #: cps/web.py:1207
 msgid "Permission denied to change public status"
-msgstr ""
+msgstr "Herkese açık durumu değiştirme izni reddedildi."
 
 #: cps/web.py:1211
 msgid "Shelf name is required"
@@ -2322,7 +2330,7 @@ msgstr "Kitaplık gizli değildi"
 
 #: cps/web.py:1422
 msgid "Error unhiding shelf"
-msgstr ""
+msgstr "Rafı gizlemeyi kaldırma hatası"
 
 #: cps/templates/admin.html:18 cps/web.py:1569
 msgid "Downloads"
@@ -2598,20 +2606,20 @@ msgstr "Tekrarlı taraması"
 
 #: cps/tasks/duplicate_scan.py:82
 msgid "Duplicate scan skipped: import in progress"
-msgstr ""
+msgstr "Yinelenen tarama atlandı: içe aktarma işlemi devam ediyor."
 
 #: cps/tasks/duplicate_scan.py:90
 msgid "Building duplicate index"
-msgstr ""
+msgstr "Yinelenen dizin oluşturma"
 
 #: cps/tasks/duplicate_scan.py:98
 #, python-format
 msgid "Building duplicate index: %(processed)s/%(total)s books"
-msgstr ""
+msgstr "Yinelenen dizin oluşturuluyor: %(processed)s/%(total)s kitap"
 
 #: cps/tasks/duplicate_scan.py:104
 msgid "Building duplicate index: no books"
-msgstr ""
+msgstr "Yinelenen dizin oluşturuluyor: kitap yok"
 
 #: cps/tasks/duplicate_scan.py:108
 #, fuzzy
@@ -2812,7 +2820,7 @@ msgstr "Harici Port"
 
 #: cps/templates/admin.html:123
 msgid "Not set — reverse proxy detected"
-msgstr ""
+msgstr "Ayarlanmadı — ters proxy algılandı"
 
 #: cps/templates/admin.html:134 cps/templates/config_view_edit.html:45
 msgid "Books per Page"
@@ -3204,19 +3212,19 @@ msgstr "Hayır"
 
 #: cps/templates/book_edit.html:228
 msgid "Hardcover Sync Blacklist"
-msgstr ""
+msgstr "Ciltli Senkronizasyon Kara Listesi"
 
 #: cps/templates/book_edit.html:232
 msgid "Blacklist annotations from syncing to Hardcover"
-msgstr ""
+msgstr "Cilt senkronizasyonundan kara liste açıklamaları"
 
 #: cps/templates/book_edit.html:239
 msgid "Blacklist reading progress from syncing to Hardcover"
-msgstr ""
+msgstr "Ciltli senkronizasyonundan kara liste okuma süreci"
 
 #: cps/templates/book_edit.html:248
 msgid "View Book on Save"
-msgstr ""
+msgstr "Kitabı Kaydet seçeneğiyle görüntüle"
 
 #: cps/templates/book_edit.html:251 cps/templates/book_edit.html:269
 msgid "Fetch Metadata"
@@ -3248,7 +3256,7 @@ msgstr "Yükleniyor..."
 
 #: cps/templates/book_edit.html:312
 msgid "Apply"
-msgstr ""
+msgstr "Uygula"
 
 #: cps/templates/book_edit.html:369
 msgid "Search error!"
@@ -3729,6 +3737,8 @@ msgid ""
 "A reverse proxy was detected. Leave blank unless you need to override the "
 "port for direct access."
 msgstr ""
+"Bir ters proxy algılandı. Doğrudan erişim için bağlantı noktasını geçersiz "
+"kılmanız gerekmiyorsa boş bırakın."
 
 #: cps/templates/config_edit.html:217
 msgid "Sync Kobo read progress to Hardcover (Requires API key per user)"
@@ -4513,8 +4523,8 @@ msgid ""
 "\">kindle-epub-fix.netlify.app</a> tool made by <a href=\"https://github.com/"
 "innocenat\">innocenat</a>."
 msgstr ""
-"Bu araç, <a href=\"https://kindle-epub-fix.netlify.app/\">kindle-epub-fix."
-"netlify.app</a> aracından uyarlanmıştır ve <a href=\"https://github.com/"
+"Bu araç, <a href=\"https://kindle-epub-fix.netlify.app/\">kindle-epub-"
+"fix.netlify.app</a> aracından uyarlanmıştır ve <a href=\"https://github.com/"
 "innocenat\">innocenat</a> tarafından geliştirilmiştir."
 
 #: cps/templates/cwa_settings.html:181
@@ -4915,6 +4925,9 @@ msgid ""
 "confidence matches are applied automatically; low-confidence matches are "
 "queued for manual review."
 msgstr ""
+"Ciltli baskı kimliği olmayan kitapları otomatik olarak arayın. Yüksek "
+"güvenilirlikteki eşleşmeler otomatik olarak uygulanır; düşük "
+"güvenilirlikteki eşleşmeler manuel inceleme için sıraya alınır."
 
 #: cps/templates/cwa_settings.html:576
 msgid "Run Schedule:"
@@ -4971,6 +4984,9 @@ msgid ""
 "Delay between API requests to Hardcover. Prevents rate limiting and protects "
 "your API key. Uses exponential backoff on errors."
 msgstr ""
+"Ciltli kitap için yapılan API istekleri arasındaki gecikme. Hız "
+"sınırlamasını önler ve API anahtarınızı korur. Hatalarda üstel geri çekilme "
+"kullanır."
 
 #: cps/templates/cwa_settings.html:731
 msgid ""
@@ -5290,7 +5306,7 @@ msgstr ""
 
 #: cps/templates/cwa_settings.html:1051
 msgid "Scheduled scans (cron expression)"
-msgstr ""
+msgstr "Planlı taramalar (cron ifadesi)"
 
 #: cps/templates/cwa_settings.html:1057
 msgid "Leave blank to disable scheduled scans. Example:"
@@ -5608,7 +5624,7 @@ msgstr "Puanlama temizlendi"
 #: cps/templates/detail.html:659 cps/templates/listenmp3.html:62
 #, python-format
 msgid "Book %(index)s of %(range)s"
-msgstr ""
+msgstr "Kitap %(index)s / %(range)s"
 
 #: cps/templates/detail.html:664
 msgid "ID"
@@ -5743,6 +5759,7 @@ msgstr "Seçilenleri Sil"
 #: cps/templates/duplicates.html:529
 msgid "Duplicate scanning needs a one-time full scan."
 msgstr ""
+"Kopya tarama işlemi için bir defaya mahsus tam tarama yapılması gerekir."
 
 #: cps/templates/duplicates.html:531
 msgid ""
@@ -5750,12 +5767,18 @@ msgid ""
 "and metadata changes. Before incremental scans can run, the index needs an "
 "initial baseline."
 msgstr ""
+"CWA artık içe aktarma ve meta veri değişiklikleri sırasında yinelenen kayıt "
+"kontrollerini hızlandırmak için yinelenen bir dizin kullanıyor. Artımlı "
+"taramalar çalıştırılmadan önce, dizinin başlangıç değerine ihtiyacı vardır."
 
 #: cps/templates/duplicates.html:534
 msgid ""
 "Click \"Run Full Duplicate Scan\" to build it. This may take several minutes "
 "on large libraries, and you can keep using CWA while it runs."
 msgstr ""
+"\"Tam Kopya Taramasını Çalıştır\" seçeneğine tıklayarak oluşturun. Bu işlem, "
+"büyük kütüphanelerde birkaç dakika sürebilir ve çalışırken CWA'yı kullanmaya "
+"devam edebilirsiniz."
 
 #: cps/templates/duplicates.html:541
 #, fuzzy
@@ -5764,7 +5787,7 @@ msgstr "eKitabı Sil"
 
 #: cps/templates/duplicates.html:542
 msgid "You can keep using CWA while it runs."
-msgstr ""
+msgstr "Çalışırken CWA'yı kullanmaya devam edebilirsiniz."
 
 #: cps/templates/duplicates.html:545 cps/templates/tasks.html:17
 msgid "Progress"
@@ -5772,7 +5795,7 @@ msgstr "İlerleme"
 
 #: cps/templates/duplicates.html:554
 msgid "View Background Tasks"
-msgstr ""
+msgstr "Arka Plan Görevlerini Görüntüle"
 
 #: cps/templates/duplicates.html:565
 msgid "Auto-Resolve Duplicates"
@@ -5876,13 +5899,15 @@ msgstr ""
 
 #: cps/templates/duplicates.html:685
 msgid "Execute Auto-Resolution"
-msgstr ""
+msgstr "Otomatik Çözümlemeyi Yürüt"
 
 #: cps/templates/duplicates.html:688
 msgid ""
 "CWA will resolve duplicate groups using the selected strategy and "
 "permanently delete duplicate books."
 msgstr ""
+"CWA, seçilen stratejiyi kullanarak yinelenen grupları çözecek ve yinelenen "
+"kitapları kalıcı olarak silecektir."
 
 #: cps/templates/duplicates.html:690
 #, fuzzy
@@ -6077,13 +6102,13 @@ msgstr "Aday Eşleşmeler"
 #: cps/templates/hardcover_review_matches.html:98
 #, python-format
 msgid "Top %(count)s"
-msgstr ""
+msgstr "En İyi %(count)s"
 
 #: cps/templates/hardcover_review_matches.html:108
 #: cps/templates/hardcover_review_matches.html:110
 #: cps/templates/hardcover_review_matches.html:112
 msgid "Confidence"
-msgstr ""
+msgstr "Güven"
 
 #: cps/templates/hardcover_review_matches.html:155
 msgid "Match Reason"
@@ -6256,6 +6281,8 @@ msgid ""
 "Enable it in CWA Settings to activate the /kosync endpoints and checksum "
 "generation."
 msgstr ""
+"/kosync uç noktalarını ve sağlama toplamı oluşturmayı etkinleştirmek için "
+"CWA Ayarlarında bu özelliği açın."
 
 #: cps/templates/kosync_plugin.html:115
 msgid "Open CWA Settings"
@@ -6343,7 +6370,7 @@ msgstr "Önceki"
 
 #: cps/templates/layout.html:353
 msgid "Go to page"
-msgstr ""
+msgstr "Sayfaya Git"
 
 #: cps/templates/layout.html:376
 msgid "Book Details"
@@ -6371,11 +6398,11 @@ msgstr "Tekrarlıları Görüntüle ve Çöz"
 
 #: cps/templates/list.html:25 cps/templates/list.html:27
 msgid "Filter by initial"
-msgstr ""
+msgstr "Başlangıç ​​değerine göre filtrele"
 
 #: cps/templates/list.html:43
 msgid "Grid"
-msgstr ""
+msgstr "Izgara"
 
 #: cps/templates/listenmp3.html:159
 msgid "Read"
@@ -7126,6 +7153,7 @@ msgstr "Kitap Dilleri"
 #: cps/templates/user_edit.html:268 cps/templates/user_edit.html:290
 msgid "Filter the library to only show books in a specific language."
 msgstr ""
+"Kütüphaneyi filtreleyerek yalnızca belirli bir dildeki kitapları gösterin."
 
 #: cps/templates/user_edit.html:280
 msgid "Book Language Filter"
@@ -7305,7 +7333,7 @@ msgstr "Kullanıcı Sil"
 
 #: cps/templates/user_edit.html:569
 msgid "Generate Kobo Auth URL"
-msgstr ""
+msgstr "Kobo Kimlik Doğrulama URL'si Oluştur"
 
 #: cps/templates/user_edit.html:631
 msgid "Visible"
