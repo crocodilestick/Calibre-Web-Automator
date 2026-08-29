@@ -4,8 +4,9 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/crocodilestick/Calibre-Web-"
 "Automated\n"
 "POT-Creation-Date: 2026-08-06 15:04+0000\n"
-"PO-Revision-Date: 2026-07-20 20:00+0000\n"
+"PO-Revision-Date: 2026-08-29 12:48+0200\n"
 "Last-Translator: Krux86Language-Team: German\n"
+"Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,7 +15,7 @@ msgstr ""
 "X-Loco-Source-Locale: de_DE\n"
 "Generated-By: Babel 2.15.0\n"
 "X-Loco-Parser: loco_parse_po\n"
-"X-Generator: Loco https://localise.biz/\n"
+"X-Generator: Poedit 3.9\n"
 
 #: cps/about.py:65
 msgid "Statistics"
@@ -700,7 +701,7 @@ msgid ""
 "endpoint."
 msgstr ""
 "Verbindung fehlgeschlagen: Ungültiges JSON in der Antwort. Dies ist "
-"möglicherweise kein OIDC"
+"möglicherweise kein OIDC."
 
 #: cps/admin.py:2907
 #, python-format
@@ -1379,14 +1380,14 @@ msgid "This Email has been sent via Calibre-Web Automated."
 msgstr "Diese E-Mail wurde von Calibre-Web Automated gesendet."
 
 #: cps/helper.py:129
-#, fuzzy, python-format
+#, python-format
 msgid "Conversion timed out for book id: %(book)d"
-msgstr "%(format)s Format für Buch-ID %(book)d nicht gefunden"
+msgstr "Konvertierung überschritt das Zeitlimit für Buch‑ID: %(book)d"
 
 #: cps/helper.py:131
-#, fuzzy, python-format
+#, python-format
 msgid "Conversion failed for book id: %(book)d"
-msgstr "%(format)s Format für Buch-ID %(book)d nicht gefunden"
+msgstr "Konvertierung fehlgeschlagen für Buch‑ID: %(book)d"
 
 #: cps/helper.py:139
 msgid "Calibre-Web Automated Test Email"
@@ -1572,7 +1573,7 @@ msgstr "Bitte keine Datei sondern einen Ordner angeben"
 
 #: cps/helper.py:1387
 msgid "Calibre binaries not viable"
-msgstr "Die Calibre Programmdaten sind nicht verwendbar."
+msgstr "Calibre‑Binärdateien nicht verwendbar"
 
 #: cps/helper.py:1396
 #, python-format
@@ -1811,8 +1812,9 @@ msgid ""
 "Duplicate scanning needs a one-time full scan before fast duplicate checks "
 "can run after imports and metadata changes. "
 msgstr ""
-"Die Duplikatsuche benötigt einen einmaligen vollständigen Scan, bevor nach "
-"Importen und Metadatenänderungen schnelle Duplikatprüfungen laufen können."
+"Die Duplikat‑Erkennung benötigt einmalig einen vollständigen Scan, bevor "
+"nach Importen und Metadatenänderungen schnelle Duplikatprüfungen ausgeführt "
+"werden können. "
 
 #: cps/render_template.py:74
 msgid "Books"
@@ -2063,9 +2065,11 @@ msgid "Sorry you are not allowed to remove a book from this shelf"
 msgstr ""
 "Entschuldige, die Berechtigung, um Bücher aus diesem Regal zu löschen, fehlt"
 
+# Klingt in sich schlüssiger.
 #: cps/shelf.py:253
+#, fuzzy
 msgid "Create a Shelf"
-msgstr "Neues Regal"
+msgstr "Regal erstellen"
 
 #: cps/shelf.py:261
 msgid "Sorry you are not allowed to edit this shelf"
@@ -2135,7 +2139,7 @@ msgstr "Aufgaben"
 
 #: cps/tasks_status.py:54
 msgid "Waiting"
-msgstr "Warte..."
+msgstr "Warte"
 
 #: cps/tasks_status.py:56
 msgid "Failed"
@@ -2848,8 +2852,9 @@ msgid "External Port"
 msgstr "Externer Port"
 
 #: cps/templates/admin.html:123
+#, fuzzy
 msgid "Not set — reverse proxy detected"
-msgstr ""
+msgstr "Unbekannte Anfragen an den Kobo‑Store weiterleiten"
 
 #: cps/templates/admin.html:134 cps/templates/config_view_edit.html:45
 msgid "Books per Page"
@@ -3287,7 +3292,7 @@ msgstr "Lade..."
 
 #: cps/templates/book_edit.html:312
 msgid "Apply"
-msgstr ""
+msgstr "Übernehmen"
 
 #: cps/templates/book_edit.html:369
 msgid "Search error!"
@@ -3755,17 +3760,20 @@ msgstr "Synchronisation mit Kobo aktivieren"
 
 #: cps/templates/config_edit.html:208
 msgid "Proxy unknown requests to Kobo Store"
-msgstr "unbekannte Anfragen an den Kobo Store weiterleiten"
+msgstr "Unbekannte Anfragen an den Kobo‑Store weiterleiten"
 
 #: cps/templates/config_edit.html:211
 msgid "Server External Port (for port forwarded API calls)"
 msgstr "Externer Server-Port (für Portweiterleitung von API-Aufrufen)"
 
 #: cps/templates/config_edit.html:213
+#, fuzzy
 msgid ""
 "A reverse proxy was detected. Leave blank unless you need to override the "
 "port for direct access."
 msgstr ""
+"Es wurde ein Reverse‑Proxy erkannt. Leer lassen, sofern der Port für den "
+"Direktzugriff nicht überschrieben werden muss."
 
 #: cps/templates/config_edit.html:217
 msgid "Sync Kobo read progress to Hardcover (Requires API key per user)"
@@ -5058,7 +5066,7 @@ msgid ""
 "of CWA is released"
 msgstr ""
 "Wenn aktiv, erscheint in der Web-Benutzeroberfläche eine Benachrichtigung, "
-"sobald eine neue Version von CWA veröffentlicht wird."
+"sobald eine neue Version von CWA veröffentlicht wird"
 
 #: cps/templates/cwa_settings.html:755
 msgid "Enable Contribute Translations Notifications"
@@ -5183,7 +5191,7 @@ msgid ""
 msgstr ""
 "Hinweis: Der Metadatenerzwingungsdienst von CWA unterstützt derzeit nur "
 "Dateien im EPUB- oder AZW3-Format. Dateien in anderen Formaten werden vom "
-"Dienst einfach ignoriert."
+"Dienst einfach ignoriert"
 
 #: cps/templates/cwa_settings.html:851
 msgid "CWA Auto-Convert - Ignored Formats"
@@ -5282,7 +5290,7 @@ msgstr "Duplikaterkennung aktivieren"
 
 #: cps/templates/cwa_settings.html:982
 msgid "When enabled, CWA will scan for duplicate books after each import"
-msgstr "Wenn aktiviert, scannt CWA nach jedem Import nach Dubletten."
+msgstr "Wenn aktiviert, führt CWA nach jedem Import eine Duplikatprüfung durch"
 
 #: cps/templates/cwa_settings.html:990
 msgid "Duplicate Detection Method"
@@ -6402,8 +6410,9 @@ msgid "Shelves"
 msgstr "Regale"
 
 #: cps/templates/layout.html:317
+#, fuzzy
 msgid "Create Shelf"
-msgstr "Neues Regal"
+msgstr "Regal erstellen"
 
 #: cps/templates/layout.html:321
 msgid "Magic Shelves ✨"
@@ -6418,8 +6427,9 @@ msgid "Previous"
 msgstr "Vorheriger Eintrag"
 
 #: cps/templates/layout.html:353
+#, fuzzy
 msgid "Go to page"
-msgstr ""
+msgstr "Zur Seite gehen"
 
 #: cps/templates/layout.html:376
 msgid "Book Details"
