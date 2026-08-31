@@ -8,6 +8,7 @@
 import os
 import re
 import json
+import ipaddress
 import operator
 import time
 import sys
@@ -2443,9 +2444,29 @@ def _configuration_update_helper():
                 and to_save.get("config_calibre_server_anonymous_writes") != "on"
                 and not (server_username and server_password)):
             return _configuration_result(_('Please enter a content server username and password, or allow anonymous writes'))
+        listen_address = strip_whitespaces(to_save.get("config_calibre_server_listen", ""))
+        if listen_address:
+            try:
+                ipaddress.ip_address(listen_address)
+            except ValueError:
+                return _configuration_result(_('Invalid content server listen address: %(address)s',
+                                               address=listen_address))
+        trusted_ips = []
+        for entry in to_save.get("config_calibre_server_trusted_ips", "").split(","):
+            entry = strip_whitespaces(entry)
+            if not entry:
+                continue
+            try:
+                ipaddress.ip_network(entry, strict=False)
+            except ValueError:
+                return _configuration_result(_('Invalid content server trusted IP/CIDR entry: %(entry)s', entry=entry))
+            trusted_ips.append(entry)
+        to_save["config_calibre_server_trusted_ips"] = ",".join(trusted_ips)
         content_server_changed |= _config_checkbox(to_save, "config_calibre_server_enabled")
         content_server_changed |= _config_int(to_save, "config_calibre_server_port")
+        content_server_changed |= _config_string(to_save, "config_calibre_server_listen")
         content_server_changed |= _config_checkbox(to_save, "config_calibre_server_anonymous_writes")
+        content_server_changed |= _config_string(to_save, "config_calibre_server_trusted_ips")
         content_server_changed |= _config_string(to_save, "config_calibre_server_username")
         if to_save.get("config_calibre_server_password_e") and not config.config_calibre_server_password_e:
             content_server_changed |= _config_string(to_save, "config_calibre_server_password_e")
@@ -3065,6 +3086,9 @@ def restore_calibre_db():
         except Exception as e:
             log.warning("Failed to dispose sessions before restore: %s", e)
 
+        # check_library manages the library directly, so the content server must release it first
+        content_server.stop()
+
         # 2. Run calibredb check_library (pre)
         calibredb_binary = get_calibre_binarypath("calibredb") or "/app/calibre/calibredb"
         check_cmd = [
@@ -3136,6 +3160,10 @@ def restore_calibre_db():
         flash(_("Restore failed: %(err)s", err=str(e)), category="error")
         return redirect(url_for("admin.db_configuration"))
     finally:
+        try:
+            content_server.start()
+        except Exception as e:
+            log.warning("Failed to restart calibre content server after restore: %s", e)
         try:
             if os.path.exists(lock_path):
                 os.remove(lock_path)

@@ -180,7 +180,9 @@ class _Settings(_Base):
 
     config_calibre_server_enabled = Column(Boolean, default=False)
     config_calibre_server_port = Column(Integer, default=8080)
+    config_calibre_server_listen = Column(String, default="127.0.0.1")
     config_calibre_server_anonymous_writes = Column(Boolean, default=False)
+    config_calibre_server_trusted_ips = Column(String, default="")
     config_calibre_server_username = Column(String, default="")
     config_calibre_server_password_e = Column(String)
 

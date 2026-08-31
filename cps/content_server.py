@@ -27,6 +27,14 @@ log = logger.create()
 _process = None
 
 
+def library_arguments():
+    """calibredb arguments addressing the library through the content server, empty when it is not running."""
+    if not config.config_calibre_server_enabled or not config.config_calibre_dir:
+        return []
+    return ["--with-library", "http://127.0.0.1:{}/#{}".format(
+        config.config_calibre_server_port, os.path.basename(config.config_calibre_dir.rstrip("/")))]
+
+
 def start():
     global _process
     stop()
@@ -37,9 +45,13 @@ def start():
     if not os.path.isfile(binary):
         log.error("calibre-server binary not found: %s", binary)
         return
-    args = [binary, "--port", str(config.config_calibre_server_port)]
+    args = [binary, "--port", str(config.config_calibre_server_port),
+            "--listen-on", config.config_calibre_server_listen or "127.0.0.1",
+            "--disable-fallback-to-detected-interface",
+            "--enable-local-write"]
     if config.config_calibre_server_anonymous_writes:
-        args += ["--enable-local-write", "--trusted-ips", "0.0.0.0/0,::/0"]
+        if config.config_calibre_server_trusted_ips:
+            args += ["--trusted-ips", config.config_calibre_server_trusted_ips]
     elif config.config_calibre_server_username and config.config_calibre_server_password_e:
         userdb = os.path.join(constants.CONFIG_DIR, "content_server_users.sqlite")
         try:
