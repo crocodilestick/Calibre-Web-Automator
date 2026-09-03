@@ -37,8 +37,16 @@ python3.pkgs.buildPythonApplication rec {
     # flask-limiter 4.x removed limiter.check(); the try block catches
     # AttributeError as a generic Exception and shows users a misleading
     # "Connection error" that blocks login entirely.  Stub it out so the
-    # except branches are dead code and login proceeds normally.
-    sed -i 's/        limiter\.check()/        pass  # limiter.check() removed in flask-limiter 4.x/' cps/web.py
+    # except branches are dead code and login proceeds normally.  The same
+    # call guards basic-auth (OPDS) and Kobo logins, which have no try block
+    # and answered every request with a 500.
+    sed -i 's/^\( *\)limiter\.check()$/\1pass  # limiter.check() removed in flask-limiter 4.x/' \
+      cps/web.py cps/usermanagement.py cps/kobo_auth.py
+
+    # flask-limiter 4.x evaluates limits before the view runs, so the OPDS key
+    # function now sees requests with no Authorization header and crashed on
+    # them; upstream Calibre-Web falls back to an empty key.
+    sed -i 's/^    return request\.authorization\.username$/    return request.authorization.username if request.authorization else ""/' cps/main.py
 
     # Explicit package-data: 'include-package-data = true' only works with a
     # VCS checkout; the Nix sandbox has no .git, so non-.py files (templates,
