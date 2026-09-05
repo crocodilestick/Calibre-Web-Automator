@@ -789,6 +789,6 @@ select.cwa-settings-select {
 }
 
 .refresh-cwa {
-  width: -webkit-fill-available;
+  width: 100%;
   justify-content: space-evenly;
 }
