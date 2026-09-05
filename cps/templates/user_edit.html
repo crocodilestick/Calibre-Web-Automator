@@ -323,10 +323,10 @@
         <label style="display: block; margin-bottom: 12px; font-weight: bold;">{{ _('Kobo Sync Token')}}</label>
         <div style="margin-bottom: 10px;">
           <a class="btn btn-default" id="config_create_kobo_token" data-toggle="modal" data-target="#modal_kobo_token" data-remote="false" href="{{ url_for('kobo_auth.generate_auth_token', user_id=content.id) }}">{{_('Create/View')}}</a>
-          <div class="btn btn-danger" id="config_delete_kobo_token" data-value="{{ content.id }}" data-remote="false" {% if not content.remote_auth_token.first() %} style="display: none;" {% endif %}>{{_('Delete')}}</div>
+          <button type="button" class="btn btn-danger" id="config_delete_kobo_token" data-value="{{ content.id }}" data-remote="false" {% if not content.remote_auth_token.first() %} style="display: none;" {% endif %}>{{_('Delete')}}</button>
         </div>
         <div>
-          <div class="btn btn-default" id="kobo_full_sync" data-value="{% if current_user.role_admin() %}{{ content.id }}{% else %}0{% endif %}" {% if not content.remote_auth_token.first() %} style="display: none;" {% endif %}>{{_('Force full kobo sync')}}</div>
+          <button type="button" class="btn btn-default" id="kobo_full_sync" data-value="{% if current_user.role_admin() %}{{ content.id }}{% else %}0{% endif %}" {% if not content.remote_auth_token.first() %} style="display: none;" {% endif %}>{{_('Force full kobo sync')}}</button>
         </div>
         {% if kobo_support and not content.role_anonymous() and not simple %}
         <div style="margin-top: 20px;
