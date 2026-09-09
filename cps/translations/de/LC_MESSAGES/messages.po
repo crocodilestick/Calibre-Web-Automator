@@ -4,8 +4,9 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/crocodilestick/Calibre-Web-"
 "Automated\n"
 "POT-Creation-Date: 2026-08-06 15:04+0000\n"
-"PO-Revision-Date: 2026-07-20 20:00+0000\n"
+"PO-Revision-Date: 2026-09-09 05:36+0200\n"
 "Last-Translator: Krux86Language-Team: German\n"
+"Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,7 +15,7 @@ msgstr ""
 "X-Loco-Source-Locale: de_DE\n"
 "Generated-By: Babel 2.15.0\n"
 "X-Loco-Parser: loco_parse_po\n"
-"X-Generator: Loco https://localise.biz/\n"
+"X-Generator: Poedit 3.9\n"
 
 #: cps/about.py:65
 msgid "Statistics"
@@ -2849,7 +2850,7 @@ msgstr "Externer Port"
 
 #: cps/templates/admin.html:123
 msgid "Not set — reverse proxy detected"
-msgstr ""
+msgstr "Nicht gesetzt - Reverse Proxy erkannt"
 
 #: cps/templates/admin.html:134 cps/templates/config_view_edit.html:45
 msgid "Books per Page"
@@ -3287,7 +3288,7 @@ msgstr "Lade..."
 
 #: cps/templates/book_edit.html:312
 msgid "Apply"
-msgstr ""
+msgstr "Anwenden"
 
 #: cps/templates/book_edit.html:369
 msgid "Search error!"
@@ -3766,6 +3767,8 @@ msgid ""
 "A reverse proxy was detected. Leave blank unless you need to override the "
 "port for direct access."
 msgstr ""
+"Ein Reverse Proxy wurde erkannt. Leerlassen, außer der Port soll für "
+"direkten Zugriff überschrieben werden."
 
 #: cps/templates/config_edit.html:217
 msgid "Sync Kobo read progress to Hardcover (Requires API key per user)"
@@ -6419,7 +6422,7 @@ msgstr "Vorheriger Eintrag"
 
 #: cps/templates/layout.html:353
 msgid "Go to page"
-msgstr ""
+msgstr "Gehe zu Seite"
 
 #: cps/templates/layout.html:376
 msgid "Book Details"
